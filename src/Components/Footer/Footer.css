@@ -42,10 +42,12 @@
   padding-bottom: 50px;
 }
 #Image1 {
-  object-position: 100% 100%;
+  object-position: 100% 100% !important;
+
 }
 #Image2 {
-  object-position: 0% 100%;
+  object-position: 0% 100% !important;
+
 }
 .gradientbackground {
   display: flex;

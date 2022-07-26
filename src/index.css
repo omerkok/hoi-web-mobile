@@ -44,3 +44,18 @@ code {
   src: local('PoppinsSemiBold'),
     url('./Fonts/Poppins-SemiBold.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'PlayfairDisplayMedium';
+  src: local('PlayfairDisplayMedium'),
+    url('./Fonts/PlayfairDisplay-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'PlayfairDisplayMediumItalic';
+  src: local('PlayfairDisplayMediumItalic'),
+    url('./Fonts/PlayfairDisplay-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'PlayfairDisplayRegular';
+  src: local('PlayfairDisplayRegular'),
+    url('./Fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+}

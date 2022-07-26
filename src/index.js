@@ -6,6 +6,9 @@ import './Fonts/Poppins-Medium.ttf';
 import './Fonts/Poppins-Light.ttf';
 import './Fonts/Poppins-SemiBold.ttf';
 import './Fonts/PlayfairDisplay-Bold.ttf';
+import './Fonts/PlayfairDisplay-Medium.ttf';
+import './Fonts/PlayfairDisplay-MediumItalic.ttf';
+import './Fonts/PlayfairDisplay-Regular.ttf';
 
 import './index.css';
 import App from './App';

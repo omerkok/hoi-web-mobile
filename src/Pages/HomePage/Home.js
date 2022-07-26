@@ -19,7 +19,7 @@ import './Home.css';
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
 
-const OurClinic = () => {
+const OurClinicContent = () => {
   return (
     <div
       style={{
@@ -349,7 +349,7 @@ const Home = () => {
       <Header />
       <TypeHair />
       <Stages />
-      <OurClinic />
+      <OurClinicContent />
       <Footer />
     </div>
   );

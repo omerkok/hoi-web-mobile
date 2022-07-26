@@ -1,5 +1,6 @@
 import React from 'react';
 import IconButton from '@mui/material/IconButton';
+import Divider from '@mui/material/Divider';
 import './Footer.css';
 import BeforeAfter2 from '../../Images/HomePage/BeforeAfter2.png';
 import AboutUsBuild from '../../Images/HomePage/AboutUsBuild.png';
@@ -50,7 +51,7 @@ const BeforeAfter = () => {
           <div style={{ width: '50%', height: '100%' }}>
             <img
               src={BeforeAfter2}
-              style={{ objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               alt='BeforeAfter'
             />
           </div>
