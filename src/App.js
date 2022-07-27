@@ -7,13 +7,14 @@ import BlogPage from './Pages/BlogPage';
 import ContactUsPage from './Pages/ContactUsPage';
 import AboutUsPage from './Pages/AboutUsPage';
 import OurClinicPage from './Pages/OurClinicPage';
+import BeforeAfterPage from './Pages/BeforeAfterPage';
 
 function App() {
   let width = document.documentElement.clientWidth;
   let height = document.documentElement.clientHeight;
   return (
     <div className='App' style={{ width: width, height: height }}>
-      <OurClinicPage />
+      <BeforeAfterPage />
     </div>
   );
 }
