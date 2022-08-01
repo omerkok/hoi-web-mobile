@@ -299,7 +299,7 @@ export const Operations = () => {
   );
 };
 
-const HairTranspalant = () => {
+const HairTransplant = () => {
   return (
     <div
       style={{
@@ -324,4 +324,4 @@ const HairTranspalant = () => {
   );
 };
 
-export default HairTranspalant;
+export default HairTransplant;
