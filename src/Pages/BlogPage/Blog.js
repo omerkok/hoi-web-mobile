@@ -1,9 +1,9 @@
 import React from 'react';
 import IconButton from '@mui/material/IconButton';
-import Header from '../../Components/Header';
-import Footer from '../../Components/Footer';
-import BlogImage from '../../Images/Blog/BlogImage.png';
-import DhiFu2 from '../../Images/DhiFue/DhiFue2.png';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import BlogImage from '../../images/BlogImage.png';
+import DhiFu2 from '../../images/DhiFue2.png';
 
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
@@ -13,7 +13,6 @@ export const BlogContent = () => {
     <div
       style={{
         width: '100%',
-        marginTop: height * 0.08,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -269,6 +268,10 @@ const Blog = () => {
         flexDirection: 'column',
       }}>
       <Header />
+      <div
+        style={{
+          marginTop: height * 0.27,
+        }}></div>
       <BlogContent />
       <Footer />
     </div>

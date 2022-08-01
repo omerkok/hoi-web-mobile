@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './Fonts/Poppins-Bold.ttf';
-import './Fonts/Poppins-Regular.ttf';
-import './Fonts/Poppins-Medium.ttf';
-import './Fonts/Poppins-Light.ttf';
-import './Fonts/Poppins-SemiBold.ttf';
-import './Fonts/PlayfairDisplay-Bold.ttf';
-import './Fonts/PlayfairDisplay-Medium.ttf';
-import './Fonts/PlayfairDisplay-MediumItalic.ttf';
-import './Fonts/PlayfairDisplay-Regular.ttf';
+import './fonts/Poppins-Bold.ttf';
+import './fonts/Poppins-Regular.ttf';
+import './fonts/Poppins-Medium.ttf';
+import './fonts/Poppins-Light.ttf';
+import './fonts/Poppins-SemiBold.ttf';
+import './fonts/PlayfairDisplay-Bold.ttf';
+import './fonts/PlayfairDisplay-Medium.ttf';
+import './fonts/PlayfairDisplay-MediumItalic.ttf';
+import './fonts/PlayfairDisplay-Regular.ttf';
 
 import './index.css';
 import App from './App';

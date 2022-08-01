@@ -11,22 +11,22 @@ import {
   YouTube,
   LinkedIn,
 } from '@mui/icons-material';
-import Header from '../../Components/Header';
-import '../../Components/Footer/Footer.css';
-import BeforeAfter2 from '../../Images/HomePage/BeforeAfter2.png';
-import AboutUsBuild from '../../Images/HomePage/AboutUsBuild.png';
-import logo from '../../Images/HomePage/HoiLogoTop.svg';
-import WideButton from '../../Components/WideButton';
-import ContactFrom from '../../Components/ContactFrom';
-import BlogPost from '../../Components/BlogPost';
-import brazil from '../../Images/ContactUs/brazil.svg';
-import france from '../../Images/ContactUs/france.svg';
-import germany from '../../Images/ContactUs/germany.svg';
-import russia from '../../Images/ContactUs/russia.svg';
-import spain from '../../Images/ContactUs/spain.svg';
-import turkey from '../../Images/ContactUs/turkey.svg';
-import unitedKingdom from '../../Images/ContactUs/united-kingdom.svg';
-import unitedStates from '../../Images/ContactUs/united-states.svg';
+import Header from '../../components/Header';
+import '../../components/Footer/Footer.css';
+import BeforeAfter2 from '../../images/BeforeAfter2.png';
+import AboutUsBuild from '../../images/AboutUsBuild.png';
+import logo from '../../images/HoiLogoTop.svg';
+import WideButton from '../../components/WideButton';
+import ContactFrom from '../../components/ContactFrom';
+import BlogPost from '../../components/BlogPost';
+import brazil from '../../images/brazil.svg';
+import france from '../../images/france.svg';
+import germany from '../../images/germany.svg';
+import russia from '../../images/russia.svg';
+import spain from '../../images/spain.svg';
+import turkey from '../../images/turkey.svg';
+import unitedKingdom from '../../images/united-kingdom.svg';
+import unitedStates from '../../images/united-states.svg';
 
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
@@ -265,8 +265,11 @@ const ContactUs = () => {
       <Header />
       <div
         style={{
+          marginTop: height * 0.27,
+        }}></div>
+      <div
+        style={{
           width: '100%',
-          marginTop: height * 0.08,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

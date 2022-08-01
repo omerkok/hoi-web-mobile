@@ -7,10 +7,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Header from '../../Components/Header';
-import Footer from '../../Components/Footer';
-import OurClinicRender1 from '../../Images/OurClinic/OurClinicRender1.png';
-import Asset from '../../Images/HomePage/Asset.png';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import OurClinicRender1 from '../../images/OurClinicRender1.png';
+import Asset from '../../images/Asset.png';
 import './OurClinic.css';
 
 var width = document.documentElement.clientWidth;
@@ -33,8 +33,11 @@ const OurClinic = () => {
       <Header />
       <div
         style={{
+          marginTop: height * 0.30,
+        }}></div>
+      <div
+        style={{
           width: '100%',
-          marginTop: height * 0.08,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

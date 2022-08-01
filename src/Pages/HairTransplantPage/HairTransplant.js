@@ -1,13 +1,13 @@
 import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
-import Header from '../../Components/Header';
-import Footer from '../../Components/Footer';
-import BeardTransplant from '../../Images/TransplantPages/BeardTransplant.png';
-import Dsc1 from '../../Images/TransplantPages/Dsc1.png';
-import DscCopy1 from '../../Images/TransplantPages/DscCopy1.png';
-import DscCopy2 from '../../Images/TransplantPages/DscCopy2.png';
-import DscCopy3 from '../../Images/TransplantPages/DscCopy3.png';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import BeardTransplant from '../../images/BeardTransplant.png';
+import Dsc1 from '../../images/Dsc1.png';
+import DscCopy1 from '../../images/DscCopy1.png';
+import DscCopy2 from '../../images/DscCopy2.png';
+import DscCopy3 from '../../images/DscCopy3.png';
 
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
@@ -17,7 +17,6 @@ export const WhoCan = () => {
     <div
       style={{
         width: '100%',
-        height: 'auto',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
@@ -309,6 +308,10 @@ const HairTranspalant = () => {
         flexDirection: 'column',
       }}>
       <Header />
+      <div
+        style={{
+          marginTop: height * 0.27,
+        }}></div>
       <WhoCan />
       <DividerConst />
       <Operations />

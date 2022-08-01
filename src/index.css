@@ -14,48 +14,48 @@ code {
 
 @font-face {
   font-family: 'PoppinsBold';
-  src: local('PoppinsBold'), url('./Fonts/Poppins-Bold.ttf') format('truetype');
+  src: local('PoppinsBold'), url('./fonts/Poppins-Bold.ttf') format('truetype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'PoppinsRegular';
   src: local('PoppinsRegular'),
-    url('./Fonts/Poppins-Regular.ttf') format('truetype');
+    url('./fonts/Poppins-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'PoppinsMedium';
   src: local('PoppinsMedium'),
-    url('./Fonts/Poppins-Medium.ttf') format('truetype');
+    url('./fonts/Poppins-Medium.ttf') format('truetype');
 }
 @font-face {
   font-family: 'PoppinsLight';
   src: local('PoppinsLight'),
-    url('./Fonts/Poppins-Light.ttf') format('truetype');
+    url('./fonts/Poppins-Light.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'PlayfairDisplayBold';
   src: local('PlayfairDisplayBold'),
-    url('./Fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+    url('./fonts/PlayfairDisplay-Bold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'PoppinsSemiBold';
   src: local('PoppinsSemiBold'),
-    url('./Fonts/Poppins-SemiBold.ttf') format('truetype');
+    url('./fonts/Poppins-SemiBold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'PlayfairDisplayMedium';
   src: local('PlayfairDisplayMedium'),
-    url('./Fonts/PlayfairDisplay-Medium.ttf') format('truetype');
+    url('./fonts/PlayfairDisplay-Medium.ttf') format('truetype');
 }
 @font-face {
   font-family: 'PlayfairDisplayMediumItalic';
   src: local('PlayfairDisplayMediumItalic'),
-    url('./Fonts/PlayfairDisplay-MediumItalic.ttf') format('truetype');
+    url('./fonts/PlayfairDisplay-MediumItalic.ttf') format('truetype');
 }
 @font-face {
   font-family: 'PlayfairDisplayRegular';
   src: local('PlayfairDisplayRegular'),
-    url('./Fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+    url('./fonts/PlayfairDisplay-Regular.ttf') format('truetype');
 }

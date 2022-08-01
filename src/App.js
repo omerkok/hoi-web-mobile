@@ -1,20 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import HomePage from './Pages/HomePage';
-import HairTranspalantPage from './Pages/HairTranspalantPage';
-import DhiAndFuePage from './Pages/DhiAndFuePage';
-import BlogPage from './Pages/BlogPage';
-import ContactUsPage from './Pages/ContactUsPage';
-import AboutUsPage from './Pages/AboutUsPage';
-import OurClinicPage from './Pages/OurClinicPage';
-import BeforeAfterPage from './Pages/BeforeAfterPage';
+import HomePage from './pages/HomePage';
+import HairTransplantPage from './pages/HairTransplantPage';
+import DhiAndFuePage from './pages/DhiAndFuePage';
+import BlogPage from './pages/BlogPage';
+import ContactUsPage from './pages/ContactUsPage';
+import AboutUsPage from './pages/AboutUsPage';
+import OurClinicPage from './pages/OurClinicPage';
+import BeforeAfterPage from './pages/BeforeAfterPage';
 
 function App() {
   let width = document.documentElement.clientWidth;
   let height = document.documentElement.clientHeight;
   return (
     <div className='App' style={{ width: width, height: height }}>
-      <BeforeAfterPage />
+      <HomePage />
     </div>
   );
 }

@@ -7,21 +7,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Header from '../../Components/Header';
-import Footer from '../../Components/Footer';
-import WideButton from '../../Components/WideButton';
-import AfroType from '../../Images/BeforeAfter/AfroType.svg';
-import BeardTransplant from '../../Images/BeforeAfter/BeardTransplant.svg';
-import HairTransplant from '../../Images/BeforeAfter/HairTransplant.svg';
-import WomanHairTransplant from '../../Images/BeforeAfter/WomanHairTransplant.svg';
-import BeforeAfterKart1 from '../../Images/BeforeAfter/BeforeAfterKart1.png';
-import BeforeAfterKart2 from '../../Images/BeforeAfter/BeforeAfterKart2.png';
-import BeforeAfterKart3 from '../../Images/BeforeAfter/BeforeAfterKart3.png';
-import BeforeAfterKart4 from '../../Images/BeforeAfter/BeforeAfterKart4.png';
-import BeforeAfterModel1 from '../../Images/BeforeAfter/BeforeAfterModel1.png';
-import BeforeAfterModel2 from '../../Images/BeforeAfter/BeforeAfterModel2.png';
-import BeforeAfterModel3 from '../../Images/BeforeAfter/BeforeAfterModel3.png';
-import Asset from '../../Images/HomePage/Asset.png';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import WideButton from '../../components/WideButton';
+import AfroType from '../../images/AfroType.svg';
+import BeardTransplant from '../../images/BeardTransplant.svg';
+import HairTransplant from '../../images/HairTransplant.svg';
+import WomanHairTransplant from '../../images/WomanHairTransplant.svg';
+import BeforeAfterKart1 from '../../images/BeforeAfterKart1.png';
+import BeforeAfterKart2 from '../../images/BeforeAfterKart2.png';
+import BeforeAfterKart3 from '../../images/BeforeAfterKart3.png';
+import BeforeAfterKart4 from '../../images/BeforeAfterKart4.png';
+import BeforeAfterModel1 from '../../images/BeforeAfterModel1.png';
+import BeforeAfterModel2 from '../../images/BeforeAfterModel2.png';
+import BeforeAfterModel3 from '../../images/BeforeAfterModel3.png';
+import Asset from '../../images/Asset.png';
 import './BeforeAfter.css';
 
 var width = document.documentElement.clientWidth;
@@ -688,13 +688,13 @@ export const SelectPeople = () => {
 
 const BeforeAfter = () => {
   const [typeListState, setTypeListState] = useState(typeList);
-
   const changeSelected = (n) => {
-    typeListState.map((n, i) => {
+    var temp = JSON.parse(JSON.stringify(typeListState));
+    temp.map((n, i) => {
       n.Selected = false;
     });
-    typeListState.find((x) => x.url === n.url).Selected = !n.Selected;
-    setTypeListState(typeListState);
+    temp.find((x) => x.url === n.url).Selected = true;
+    setTypeListState(temp);
   };
 
   return (
@@ -707,12 +707,15 @@ const BeforeAfter = () => {
       <Header />
       <div
         style={{
+          marginTop: height * 0.30,
+        }}></div>
+      <div
+        style={{
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
           width: '100%',
-          marginTop: height * 0.07,
           marginBottom: height * 0.05,
         }}>
         <div

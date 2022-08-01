@@ -1,12 +1,12 @@
 import React from 'react';
 import IconButton from '@mui/material/IconButton';
 
-import Header from '../../Components/Header';
-import Footer from '../../Components/Footer';
-import WideButton from '../../Components/WideButton';
-import HoiIcon from '../../Images/AboutUs/HoiIcon.svg';
-import HoiMan from '../../Images/AboutUs/HoiMan.svg';
-import Pers from '../../Images/AboutUs/Pers.png';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import WideButton from '../../components/WideButton';
+import HoiIcon from '../../images/HoiIcon.svg';
+import HoiMan from '../../images/HoiMan.svg';
+import Pers from '../../images/Pers.png';
 
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
@@ -16,7 +16,6 @@ export const AboutUsContent = () => {
     <div
       style={{
         width: '100%',
-        marginTop: height * 0.04,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -125,6 +124,10 @@ const AboutUs = () => {
         flexDirection: 'column',
       }}>
       <Header />
+      <div
+        style={{
+          marginTop: height * 0.25,
+        }}></div>
       <AboutUsContent />
       <Footer />
     </div>

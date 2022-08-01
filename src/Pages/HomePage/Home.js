@@ -6,14 +6,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Header from '../../Components/Header';
-import Footer from '../../Components/Footer';
-import WideButton from '../../Components/WideButton';
-import Asset from '../../Images/HomePage/Asset.png';
-import AfroType from '../../Images/HomePage/AfroType.svg';
-import BeardTransplant from '../../Images/HomePage/BeardTransplant.svg';
-import HairTransplant from '../../Images/HomePage/HairTransplant.svg';
-import WomanHairTransplant from '../../Images/HomePage/WomanHairTransplant.svg';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import WideButton from '../../components/WideButton';
+import Asset from '../../images/Asset.png';
+import AfroType from '../../images/AfroType.svg';
+import BeardTransplant from '../../images/BeardTransplant.svg';
+import HairTransplant from '../../images/HairTransplant.svg';
+import WomanHairTransplant from '../../images/WomanHairTransplant.svg';
 import './Home.css';
 
 var width = document.documentElement.clientWidth;
@@ -345,8 +345,18 @@ export const Stages = () => {
 
 const Home = () => {
   return (
-    <div className='HomePageContainer' style={{ width: width, height: height }}>
+    <div
+      style={{
+        width: width,
+        height: height,
+        display: 'flex',
+        flexDirection: 'column',
+      }}>
       <Header />
+      <div
+        style={{
+          marginTop: height * 0.27,
+        }}></div>
       <TypeHair />
       <Stages />
       <OurClinicContent />
