@@ -14,7 +14,7 @@ function App() {
   let height = document.documentElement.clientHeight;
   return (
     <div className='App' style={{ width: width, height: height }}>
-      <HomePage />
+      <ContactUsPage />
     </div>
   );
 }

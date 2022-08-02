@@ -12,7 +12,9 @@ import {
   LinkedIn,
 } from '@mui/icons-material';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import '../../components/Footer/Footer.css';
+import { globalStyles } from '../../assets/Styles';
 import BeforeAfter2 from '../../images/BeforeAfter2.png';
 import AboutUsBuild from '../../images/AboutUsBuild.png';
 import logo from '../../images/HoiLogoTop.svg';
@@ -27,581 +29,96 @@ import spain from '../../images/spain.svg';
 import turkey from '../../images/turkey.svg';
 import unitedKingdom from '../../images/united-kingdom.svg';
 import unitedStates from '../../images/united-states.svg';
+import '../../assets/Styles/PStyles.css';
 
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
 
-const BeforeAfter = () => {
-  return (
-    <div
-      style={{
-        width: '100%',
-        height: 'auto',
-        display: 'flex',
-        flexDirection: 'column',
-        marginTop: height * 0.05,
-      }}>
-      {' '}
-      <span id='BeforeAfter'>{'BEFORE & AFTER'}</span>
-      <span id='HairTransparent'>{'hair transplant'}</span>
-      <div id='ImageContainer' style={{ paddingBottom: height * 0.1 }}>
-        <div
-          style={{
-            width: '100%',
-            height: 'auto',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-          <div style={{ width: '15%', height: '80%', paddingRight: '10%' }}>
-            <img
-              id='Image1'
-              src={BeforeAfter2}
-              style={{
-                width: '100%',
-                height: '100%',
-                opacity: 0.5,
-                objectFit: 'cover',
-              }}
-              alt='BeforeAfter'
-            />
-          </div>
-          <div style={{ width: '50%', height: '100%' }}>
-            <img
-              src={BeforeAfter2}
-              style={{ objectFit: 'cover' }}
-              alt='BeforeAfter'
-            />
-          </div>
-          <div style={{ width: '15%', height: '80%', paddingLeft: '10%' }}>
-            <img
-              id='Image2'
-              src={BeforeAfter2}
-              style={{
-                width: '100%',
-                height: '100%',
-                opacity: 0.5,
-                objectFit: 'cover',
-              }}
-              alt='BeforeAfter'
-            />
-          </div>
-        </div>
-
-        <p
-          style={{
-            fontFamily: 'PoppinsRegular',
-            width: width * 0.8,
-            color: '#1f232a',
-            fontSize: 18,
-          }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-          lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commod
-        </p>
-        <WideButton
-          text='MORE RESULT'
-          onPress={() => console.log('tıllandı')}
-        />
-      </div>
-    </div>
-  );
-};
-
-const Bottom = () => {
-  return (
-    <div
-      className='FooterBottomContainer'
-      style={{
-        height: height * 0.4,
-        width: width,
-        backgroundColor: '#779f7d',
-      }}>
-      <IconButton style={{ height: width * 0.16, width: width * 0.16 }}>
-        <img
-          src={logo}
-          style={{
-            height: width * 0.16,
-            width: width * 0.16,
-          }}
-          alt='Hoi'
-        />
-      </IconButton>
-      <p
-        style={{
-          fontFamily: 'PoppinsLight',
-          width: width * 0.8,
-          color: '#ffffff',
-          fontSize: 14,
-        }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-        suspendisse ultrices gravida.
-      </p>
-    </div>
-  );
-};
-
-const AboutUs = () => {
-  return (
-    <div className='gradientbackground'>
-      <span
-        style={{
-          color: '#ffffff',
-          fontFamily: 'PoppinsBold',
-          fontSize: 35,
-          marginBottom: '5%',
-        }}>
-        {'ABOUT US'}
-      </span>
-      <img
-        src={AboutUsBuild}
-        style={{
-          width: '80%',
-          objectFit: 'contain',
-          marginBottom: '5%',
-        }}
-        alt='BeforeAfter'
-      />
-      <p
-        style={{
-          fontFamily: 'PoppinsRegular',
-          width: width * 0.8,
-          color: '#1f232a',
-          fontSize: 18,
-          marginBottom: '5%',
-        }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-        suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-        lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Quis ipsum suspendisse ultrices gravida. Risus commod
-      </p>
-      <WideButton text='ABOUT US' onPress={() => console.log('tıklandı')} />
-    </div>
-  );
-};
-
-const BottomMenu = () => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        height: height * 0.3,
-        marginBottom: '7%',
-      }}>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-start',
-          justifyContent: 'space-evenly',
-          width: '40%',
-          paddingRight: '3%',
-          height: height * 0.3,
-        }}>
-        <Link href='#' underline='none' style={styles.link}>
-          {'HAIR TRANSPLANTATION'}
-        </Link>
-        <Link href='#' underline='none' style={styles.link}>
-          {'BEARD TRANSPLANTATION'}
-        </Link>
-        <Link href='#' underline='none' style={styles.link}>
-          {'AFRO TYPE'}
-        </Link>
-        <Link href='#' underline='none' style={styles.link}>
-          {'WOMAN TRANSPLANTATION'}
-        </Link>
-        <Link href='#' underline='none' style={styles.link}>
-          {'EYEBROW'}
-        </Link>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-start',
-          justifyContent: 'space-evenly',
-          paddingLeft: '3%',
-          width: '45%',
-          height: height * 0.3,
-        }}>
-        <Link href='#' underline='none' style={styles.link}>
-          {'HAIR TRANSPLANTATION'}
-        </Link>
-        <Link href='#' underline='none' style={styles.link}>
-          {'BEARD TRANSPLANTATION'}
-        </Link>
-        <Link href='#' underline='none' style={styles.link}>
-          {'AFRO TYPE'}
-        </Link>
-        <Link href='#' underline='none' style={styles.link}>
-          {'WOMAN TRANSPLANTATION'}
-        </Link>
-        <Link href='#' underline='none' style={styles.link}>
-          {'EYEBROW'}
-        </Link>
-      </div>
-    </div>
-  );
-};
-
 const ContactUs = () => {
   return (
-    <div
-      style={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-      }}>
+    <div style={styles.container}>
       <Header />
-      <div
-        style={{
-          marginTop: height * 0.27,
-        }}></div>
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          marginBottom: height * 0.08,
-        }}>
-        <span
-          style={{
-            color: '#1f232a',
-            fontFamily: 'PlayfairDisplayBold',
-            fontSize: 35,
-            marginBottom: height * 0.05,
-          }}>
-          {'CONTACT US'}
-        </span>
+      <div style={styles.divider}></div>
+      <div style={styles.subContainer}>
+        <span style={styles.title}>{'CONTACT US'}</span>
         <IconButton style={styles.iconButton}>
           <WhatsappOutlined style={styles.icon} />
         </IconButton>
-        <div
-          style={{
-            marginTop: height * 0.05,
-            width: '80%',
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '10%',
-            backgroundColor: 'rgba(119, 159, 125, 0.3)',
-            marginBottom: height * 0.05,
-          }}>
-          <div
-            style={{
-              width: '50%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}>
-            <IconButton
-              style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <img
-                src={unitedKingdom}
-                style={{
-                  width: 35,
-                  height: 35,
-                  marginRight: 7,
-                }}
-              />
-              <span
-                style={{
-                  color: '#1f232a',
-                  fontFamily: 'PoppinsMedium',
-                  fontSize: 16,
-                }}>
-                {'+90 (530) 688 42 47'}
-              </span>
-            </IconButton>
-            <IconButton
-              style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <img
-                src={unitedStates}
-                style={{
-                  width: 35,
-                  height: 35,
-                  marginRight: 7,
-                }}
-              />
-              <span
-                style={{
-                  color: '#1f232a',
-                  fontFamily: 'PoppinsMedium',
-                  fontSize: 16,
-                }}>
-                {'+90 (530) 688 42 47'}
-              </span>
-            </IconButton>
-            <IconButton
-              style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <img
-                src={germany}
-                style={{
-                  width: 35,
-                  height: 35,
-                  marginRight: 7,
-                }}
-              />
-              <span
-                style={{
-                  color: '#1f232a',
-                  fontFamily: 'PoppinsMedium',
-                  fontSize: 16,
-                }}>
-                {'+90 (530) 688 42 47'}
-              </span>
-            </IconButton>
-            <IconButton
-              style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <img
-                src={spain}
-                style={{
-                  width: 35,
-                  height: 35,
-                  marginRight: 7,
-                }}
-              />
-              <span
-                style={{
-                  color: '#1f232a',
-                  fontFamily: 'PoppinsMedium',
-                  fontSize: 16,
-                }}>
-                {'+90 (530) 688 42 47'}
-              </span>
-            </IconButton>
+        <div style={styles.contentBack}>
+          <div style={styles.blog}>
+            <div style={styles.iconButton1}>
+              <img src={unitedKingdom} style={styles.image} />
+              <span style={styles.numberText}>{'+90 (530) 688 42 47'}</span>
+            </div>
+            <div style={styles.iconButton1}>
+              <img src={unitedStates} style={styles.image} />
+              <span style={styles.numberText}>{'+90 (530) 688 42 47'}</span>
+            </div>
+            <div style={styles.iconButton1}>
+              <img src={germany} style={styles.image} />
+              <span style={styles.numberText}>{'+90 (530) 688 42 47'}</span>
+            </div>
+            <div style={styles.iconButton1}>
+              <img src={spain} style={styles.image} />
+              <span style={styles.numberText}>{'+90 (530) 688 42 47'}</span>
+            </div>
           </div>
-          <div
-            style={{
-              width: '50%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}>
-            <IconButton
-              style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <img
-                src={russia}
-                style={{
-                  width: 35,
-                  height: 35,
-                  marginRight: 7,
-                }}
-              />
-              <span
-                style={{
-                  color: '#1f232a',
-                  fontFamily: 'PoppinsMedium',
-                  fontSize: 16,
-                }}>
-                {'+90 (530) 688 42 47'}
-              </span>
-            </IconButton>
-            <IconButton
-              style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <img
-                src={france}
-                style={{
-                  width: 35,
-                  height: 35,
-                  marginRight: 7,
-                }}
-              />
-              <span
-                style={{
-                  color: '#1f232a',
-                  fontFamily: 'PoppinsMedium',
-                  fontSize: 16,
-                }}>
-                {'+90 (530) 688 42 47'}
-              </span>
-            </IconButton>
-            <IconButton
-              style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <img
-                src={brazil}
-                style={{
-                  width: 35,
-                  height: 35,
-                  marginRight: 7,
-                }}
-              />
-              <span
-                style={{
-                  color: '#1f232a',
-                  fontFamily: 'PoppinsMedium',
-                  fontSize: 16,
-                }}>
-                {'+90 (530) 688 42 47'}
-              </span>
-            </IconButton>
-            <IconButton
-              style={{
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-              }}>
-              <img
-                src={turkey}
-                style={{
-                  width: 35,
-                  height: 35,
-                  marginRight: 7,
-                }}
-              />
-              <span
-                style={{
-                  color: '#1f232a',
-                  fontFamily: 'PoppinsMedium',
-                  fontSize: 16,
-                }}>
-                {'+90 (530) 688 42 47'}
-              </span>
-            </IconButton>
+          <div style={styles.blog}>
+            <div style={styles.iconButton1}>
+              <img src={russia} style={styles.image} />
+              <span style={styles.numberText}>{'+90 (530) 688 42 47'}</span>
+            </div>
+            <div style={styles.iconButton1}>
+              <img src={france} style={styles.image} />
+              <span style={styles.numberText}>{'+90 (530) 688 42 47'}</span>
+            </div>
+            <div style={styles.iconButton1}>
+              <img src={brazil} style={styles.image} />
+              <span style={styles.numberText}>{'+90 (530) 688 42 47'}</span>
+            </div>
+            <div style={styles.iconButton1}>
+              <img src={turkey} style={styles.image} />
+              <span style={styles.numberText}>{'+90 (530) 688 42 47'}</span>
+            </div>
           </div>
         </div>
         <div
           style={{
-            width: '80%',
-            display: 'flex',
-            flexDirection: 'row',
+            ...styles.blog2,
             justifyContent: 'space-between',
           }}>
-          <IconButton style={styles.iconButton2}>
+          <div style={styles.iconButton2}>
             <Instagram style={styles.icon2} />
-            <span
-              style={{
-                color: '#1f232a',
-                fontFamily: 'PoppinsMedium',
-                fontSize: 16,
-              }}>
-              {'hairofistanbul'}
-            </span>
-          </IconButton>
-          <IconButton style={styles.iconButton2}>
+            <span style={styles.numberText2}>{'hairofistanbul'}</span>
+          </div>
+          <div style={styles.iconButton2}>
             <FacebookOutlined style={styles.icon2} />
-            <span
-              style={{
-                color: '#1f232a',
-                fontFamily: 'PoppinsMedium',
-                fontSize: 16,
-              }}>
-              {'hairofistanbul'}
-            </span>
-          </IconButton>
-          <IconButton style={styles.iconButton2}>
+            <span style={styles.numberText2}>{'hairofistanbul'}</span>
+          </div>
+          <div style={styles.iconButton2}>
             <Twitter style={styles.icon2} />
-            <span
-              style={{
-                color: '#1f232a',
-                fontFamily: 'PoppinsMedium',
-                fontSize: 16,
-              }}>
-              {'hairofistanbul'}
-            </span>
-          </IconButton>
+            <span style={styles.numberText2}>{'hairofistanbul'}</span>
+          </div>
         </div>
         <div
           style={{
-            width: '80%',
-            display: 'flex',
-            flexDirection: 'row',
+            ...styles.blog2,
             justifyContent: 'center',
           }}>
-          <IconButton style={styles.iconButton2}>
+          <div style={styles.iconButton2}>
             <YouTube style={styles.icon2} />
-            <span
-              style={{
-                color: '#1f232a',
-                fontFamily: 'PoppinsMedium',
-                fontSize: 16,
-              }}>
-              {'hairofistanbul'}
-            </span>
-          </IconButton>
-          <IconButton style={styles.iconButton2}>
+            <span style={styles.numberText2}>{'hairofistanbul'}</span>
+          </div>
+          <div style={styles.iconButton2}>
             <LinkedIn style={styles.icon2} />
-            <span
-              style={{
-                color: '#1f232a',
-                fontFamily: 'PoppinsMedium',
-                fontSize: 16,
-              }}>
-              {'hairofistanbul'}
-            </span>
-          </IconButton>
+            <span style={styles.numberText2}>{'hairofistanbul'}</span>
+          </div>
         </div>
       </div>
-      <Divider
-      style={{
-        width: width,
-        height: height * 0.05,
-        backgroundColor: '#f9f7ee',
-        border: 0,
-      }}
-    />
+      <Divider style={styles.divider2} />
       <ContactFrom />
-      <Divider
-      style={{
-        width: width,
-        height: height * 0.05,
-        backgroundColor: '#f9f7ee',
-        border: 0,
-      }}
-    />
-      <BeforeAfter />
-      <BlogPost />
-      <AboutUs />
-      <BottomMenu />
-      <Bottom />
+      <Divider style={styles.divider2} />
+      <Footer contact={false} />
     </div>
   );
 };
@@ -612,8 +129,8 @@ const styles = {
   icon: {
     height: width * 0.1,
     width: width * 0.1,
-    color: '#ffffff',
-    backgroundColor: '#779f7d',
+    color: globalStyles.whiteColor,
+    backgroundColor: globalStyles.greenColor,
     borderRadius: width * 0.1,
     padding: width * 0.01,
   },
@@ -624,8 +141,8 @@ const styles = {
   icon2: {
     height: width * 0.05,
     width: width * 0.05,
-    color: '#ffffff',
-    backgroundColor: '#779f7d',
+    color: globalStyles.whiteColor,
+    backgroundColor: globalStyles.greenColor,
     borderRadius: width * 0.1,
     padding: width * 0.01,
     marginBottom: height * 0.01,
@@ -636,11 +153,80 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
   },
-  link: {
+
+  container: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  divider: {
+    marginTop: height * 0.27,
+  },
+  divider2: {
+    width: width,
+    height: height * 0.05,
+    backgroundColor: globalStyles.whiteDarkColor,
+    border: 0,
+  },
+  subContainer: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: height * 0.08,
+  },
+  title: {
+    color: globalStyles.blackColor,
+    fontFamily: 'PlayfairDisplayBold',
+    fontSize: globalStyles.h35,
+    marginBottom: height * 0.05,
+  },
+  contentBack: {
+    marginTop: height * 0.05,
+    width: '80%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '10%',
+    backgroundColor: globalStyles.greenOpacity3,
+    marginBottom: height * 0.05,
+  },
+  blog: {
+    width: '50%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  iconButton1: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: height * 0.02,
+  },
+  image: {
+    width: globalStyles.flagSize,
+    height: globalStyles.flagSize,
+    marginRight: 5,
+  },
+  numberText: {
+    width: '80%',
+    color: globalStyles.blackColor,
     fontFamily: 'PoppinsMedium',
-    color: '#779f7d',
-    fontSize: 18,
-    alignItems: 'flex-start',
-    textAlign: 'left',
+    fontSize: globalStyles.h16,
+    marginRight: 2,
+  },
+  numberText2: {
+    width: '98%',
+    color: globalStyles.blackColor,
+    fontFamily: 'PoppinsMedium',
+    fontSize: globalStyles.h16,
+  },
+  blog2: {
+    width: '80%',
+    display: 'flex',
+    flexDirection: 'row',
+    paddingTop: height * 0.02,
   },
 };

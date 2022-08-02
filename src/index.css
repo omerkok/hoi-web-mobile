@@ -50,11 +50,6 @@ code {
     url('./fonts/PlayfairDisplay-Medium.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'PlayfairDisplayMediumItalic';
-  src: local('PlayfairDisplayMediumItalic'),
-    url('./fonts/PlayfairDisplay-MediumItalic.ttf') format('truetype');
-}
-@font-face {
   font-family: 'PlayfairDisplayRegular';
   src: local('PlayfairDisplayRegular'),
     url('./fonts/PlayfairDisplay-Regular.ttf') format('truetype');

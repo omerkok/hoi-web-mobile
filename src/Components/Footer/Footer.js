@@ -1,15 +1,16 @@
 import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
+import Link from '@mui/material/Link';
+import WideButton from '../WideButton';
+import ContactFrom from '../ContactFrom';
+import BlogPost from '../BlogPost';
+import { globalStyles } from '../../assets/Styles';
 import './Footer.css';
 import BeforeAfter2 from '../../images/BeforeAfter2.png';
 import AboutUsBuild from '../../images/AboutUsBuild.png';
 import logo from '../../images/HoiLogoTop.svg';
-import logo2 from '../../logo2.svg';
-import WideButton from '../WideButton';
-import ContactFrom from '../ContactFrom';
-import BlogPost from '../BlogPost';
-import Link from '@mui/material/Link';
+import '../../assets/Styles/PStyles.css';
 
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
@@ -70,13 +71,7 @@ const BeforeAfter = () => {
           </div>
         </div>
 
-        <p
-          style={{
-            fontFamily: 'PoppinsRegular',
-            width: width * 0.8,
-            color: '#1f232a',
-            fontSize: 18,
-          }}>
+        <p className='line7' style={styles.pStyle1}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
           suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
@@ -95,30 +90,11 @@ const BeforeAfter = () => {
 
 const Bottom = () => {
   return (
-    <div
-      className='FooterBottomContainer'
-      style={{
-        height: height * 0.4,
-        width: width,
-        backgroundColor: '#779f7d',
-      }}>
-      <IconButton style={{ height: width * 0.16, width: width * 0.16 }}>
-        <img
-          src={logo}
-          style={{
-            height: width * 0.16,
-            width: width * 0.16,
-          }}
-          alt='Hoi'
-        />
+    <div className='FooterBottomContainer' style={styles.footerBottomContainer}>
+      <IconButton style={styles.logoStyle}>
+        <img src={logo} style={styles.logoStyle} alt='Hoi' />
       </IconButton>
-      <p
-        style={{
-          fontFamily: 'PoppinsLight',
-          width: width * 0.8,
-          color: '#ffffff',
-          fontSize: 14,
-        }}>
+      <p style={styles.pStyle2}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
         suspendisse ultrices gravida.
@@ -130,32 +106,9 @@ const Bottom = () => {
 const AboutUs = () => {
   return (
     <div className='gradientbackground'>
-      <span
-        style={{
-          color: '#ffffff',
-          fontFamily: 'PoppinsBold',
-          fontSize: 35,
-          marginBottom: '5%',
-        }}>
-        {'ABOUT US'}
-      </span>
-      <img
-        src={AboutUsBuild}
-        style={{
-          width: '80%',
-          objectFit: 'contain',
-          marginBottom: '5%',
-        }}
-        alt='BeforeAfter'
-      />
-      <p
-        style={{
-          fontFamily: 'PoppinsRegular',
-          width: width * 0.8,
-          color: '#1f232a',
-          fontSize: 18,
-          marginBottom: '5%',
-        }}>
+      <span style={styles.textStyle}>{'ABOUT US'}</span>
+      <img src={AboutUsBuild} style={styles.imageStyle} alt='BeforeAfter' />
+      <p className='line7' style={styles.pStyle3}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
         suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
@@ -170,26 +123,8 @@ const AboutUs = () => {
 
 const BottomMenu = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        height: height * 0.3,
-        marginBottom: '7%',
-      }}>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-start',
-          justifyContent: 'space-evenly',
-          width: '40%',
-          paddingRight: '3%',
-          height: height * 0.3,
-        }}>
+    <div style={styles.bottomMenuContainer}>
+      <div style={styles.bottomMenuSubContainer}>
         <Link href='#' underline='none' style={styles.link}>
           {'HAIR TRANSPLANTATION'}
         </Link>
@@ -206,16 +141,7 @@ const BottomMenu = () => {
           {'EYEBROW'}
         </Link>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'flex-start',
-          justifyContent: 'space-evenly',
-          paddingLeft: '3%',
-          width: '45%',
-          height: height * 0.3,
-        }}>
+      <div style={styles.bottomMenuSubContainer}>
         <Link href='#' underline='none' style={styles.link}>
           {'HAIR TRANSPLANTATION'}
         </Link>
@@ -236,11 +162,11 @@ const BottomMenu = () => {
   );
 };
 
-const Footer = () => {
+const Footer = ({ contact = true }) => {
   return (
     <div className='FooterContainer'>
       <BeforeAfter />
-      <ContactFrom />
+      {contact && <ContactFrom />}
       <BlogPost />
       <AboutUs />
       <BottomMenu />
@@ -252,11 +178,69 @@ const Footer = () => {
 export default Footer;
 
 const styles = {
+  footerBottomContainer: {
+    height: height * 0.4,
+    width: width,
+    backgroundColor: globalStyles.greenColor,
+  },
   link: {
     fontFamily: 'PoppinsMedium',
-    color: '#779f7d',
-    fontSize: 18,
+    color: globalStyles.greenColor,
+    fontSize: globalStyles.h18,
     alignItems: 'flex-start',
     textAlign: 'left',
+  },
+  pStyle1: {
+    fontFamily: 'PoppinsRegular',
+    width: '80%',
+    color: globalStyles.blackColor,
+    fontSize: globalStyles.h18,
+  },
+  pStyle2: {
+    fontFamily: 'PoppinsLight',
+    width: '80%',
+    color: globalStyles.whiteColor,
+    fontSize: globalStyles.h14,
+  },
+  pStyle3: {
+    fontFamily: 'PoppinsRegular',
+    width: '80%',
+    color: globalStyles.blackColor,
+    fontSize: globalStyles.h18,
+    marginBottom: globalStyles.m5,
+  },
+  textStyle: {
+    width: '80%',
+    color: globalStyles.whiteColor,
+    fontFamily: 'PoppinsBold',
+    fontSize: globalStyles.h35,
+    marginBottom: globalStyles.m5,
+  },
+  imageStyle: {
+    width: '80%',
+    objectFit: 'contain',
+    marginBottom: globalStyles.m5,
+  },
+  bottomMenuContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: height * 0.3,
+    marginBottom: globalStyles.m7,
+  },
+  bottomMenuSubContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'space-evenly',
+    width: '40%',
+    paddingRight: globalStyles.p3,
+    height: height * 0.3,
+  },
+  logoStyle: {
+    height: width * 0.18,
+    width: width * 0.18,
   },
 };

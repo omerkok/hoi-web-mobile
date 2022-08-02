@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import IconButton from '@mui/material/IconButton';
+import { globalStyles } from '../../assets/Styles';
 import './Header.css';
 import logo from '../../images/HoiLogoTop.svg';
 
@@ -51,27 +52,15 @@ const Header = (props) => {
       <HideOnScroll {...props}>
         <div style={styles.container}>
           <div className='HeaderContainerTop' style={styles.headerContainerTop}>
-            <IconButton style={{ height: width * 0.16, width: width * 0.16 }}>
-              <img
-                src={logo}
-                style={{
-                  height: width * 0.16,
-                  width: width * 0.16,
-                }}
-                alt='Hoi'
-              />
+            <IconButton style={styles.logoStyle}>
+              <img src={logo} style={styles.logoStyle} alt='Hoi' />
             </IconButton>
-            <div style={{ color: 'transparent', width: width * 0.27 }}></div>
-            <IconButton
-              style={{
-                height: width * 0.05,
-                width: width * 0.05,
-              }}>
+            <div style={{ color: 'transparent', width: width * 0.25 }}></div>
+            <IconButton style={styles.menuIconStyle}>
               <Menu
                 style={{
-                  height: width * 0.05,
-                  width: width * 0.05,
-                  color: 'white',
+                  ...styles.menuIconStyle,
+                  color: globalStyles.whiteColor,
                 }}
               />
             </IconButton>
@@ -114,39 +103,47 @@ const styles = {
     backgroundColor: 'transparent',
     width: '100%',
     alignItems: 'center',
-    marginBottom: '7%',
+    marginBottom: globalStyles.m7,
     position: 'fixed',
     zIndex: 99,
   },
   icon: {
-    height: width * 0.04,
-    width: width * 0.04,
-    color: '#779f7d',
-    backgroundColor: '#ffffff',
-    borderRadius: width * 0.03,
+    height: width * 0.05,
+    width: width * 0.05,
+    color: globalStyles.greenColor,
+    backgroundColor: globalStyles.whiteColor,
+    borderRadius: width * 0.5,
     padding: width * 0.01,
   },
   iconButton: {
-    height: width * 0.05,
-    width: width * 0.05,
+    height: width * 0.06,
+    width: width * 0.06,
   },
   headerContainerBottom: {
-    height: height * 0.07,
+    height: width * 0.14,
     alignItems: 'center',
-    backgroundColor: '#779f7d',
+    backgroundColor: globalStyles.greenColor,
     marginLeft: width * 0.05,
     width: width * 0.8,
     paddingRight: width * 0.05,
     paddingLeft: width * 0.05,
-    borderBottomLeftRadius: 45,
-    borderBottomRightRadius: 45,
+    borderBottomLeftRadius: width * 0.1,
+    borderBottomRightRadius: width * 0.1,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },
   headerContainerTop: {
     height: height * 0.15,
     justifyContent: 'center',
-    backgroundColor: '#779f7d',
-    width: '100%',
+    backgroundColor: globalStyles.greenColor,
+    width: width,
+  },
+  logoStyle: {
+    height: width * 0.18,
+    width: width * 0.18,
+  },
+  menuIconStyle: {
+    height: width * 0.06,
+    width: width * 0.06,
   },
 };

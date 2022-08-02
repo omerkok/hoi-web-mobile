@@ -10,6 +10,7 @@ import 'swiper/css/scrollbar';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import WideButton from '../../components/WideButton';
+import { globalStyles } from '../../assets/Styles';
 import AfroType from '../../images/AfroType.svg';
 import BeardTransplant from '../../images/BeardTransplant.svg';
 import HairTransplant from '../../images/HairTransplant.svg';
@@ -333,23 +334,9 @@ export const Carousel = () => {
     },
   };
   return (
-    <div
-      style={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        marginBottom: height * 0.05,
-      }}>
+    <div style={styles.carouselContainer}>
       <Swiper
-        style={{
-          width: width,
-          height: height * 0.47,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
+        style={styles.swiperStyles}
         autoplay={true}
         modules={[Pagination, A11y]}
         spaceBetween={50}
@@ -358,96 +345,20 @@ export const Carousel = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}>
         <SwiperSlide>
-          <span
-            style={{
-              color: '#1f232a',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 36,
-              width: 'auto',
-              marginLeft: width * 0.1,
-              marginRight: width * 0.1,
-            }}>
-            {'HAIR TRANSPLANT'}
-          </span>
-          <img
-            src={Asset}
-            style={{
-              width: '80%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
-            alt='BeforeAfter'
-          />
+          <span style={styles.swiperTitle}>{'HAIR TRANSPLANT'}</span>
+          <img src={Asset} style={styles.swiperImage} alt='BeforeAfter' />
         </SwiperSlide>
         <SwiperSlide>
-          <span
-            style={{
-              color: '#1f232a',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 36,
-              width: 'auto',
-              marginLeft: width * 0.1,
-              marginRight: width * 0.1,
-            }}>
-            {'PHOTO ROOM'}
-          </span>
-          <img
-            src={Asset}
-            style={{
-              width: '80%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
-            alt='BeforeAfter'
-          />
+          <span style={styles.swiperTitle}>{'PHOTO ROOM'}</span>
+          <img src={Asset} style={styles.swiperImage} alt='BeforeAfter' />
         </SwiperSlide>
         <SwiperSlide>
-          <span
-            style={{
-              color: '#1f232a',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 36,
-              width: 'auto',
-              marginLeft: width * 0.1,
-              marginRight: width * 0.1,
-            }}>
-            {'PHOTO ROOM'}
-          </span>
-          <img
-            src={Asset}
-            style={{
-              width: '80%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
-            alt='BeforeAfter'
-          />
+          <span style={styles.swiperTitle}>{'PHOTO ROOM'}</span>
+          <img src={Asset} style={styles.swiperImage} alt='BeforeAfter' />
         </SwiperSlide>
         <SwiperSlide>
-          <span
-            style={{
-              color: '#1f232a',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 36,
-              width: 'auto',
-              marginLeft: width * 0.1,
-              marginRight: width * 0.1,
-            }}>
-            {'PHOTO ROOM'}
-          </span>
-          <img
-            src={Asset}
-            style={{
-              width: '80%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
-            alt='BeforeAfter'
-          />
+          <span style={styles.swiperTitle}>{'PHOTO ROOM'}</span>
+          <img src={Asset} style={styles.swiperImage} alt='BeforeAfter' />
         </SwiperSlide>
       </Swiper>
     </div>
@@ -456,159 +367,49 @@ export const Carousel = () => {
 
 export const SelectPeople = () => {
   return (
-    <div
-      style={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        marginBottom: height * 0.05,
-      }}>
-      <div
-        style={{
-          width: '80%',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-        }}>
-        <IconButton
-          style={{
-            width: '22%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
+    <div style={styles.selectContainer}>
+      <div style={styles.selectSubcontainer}>
+        <IconButton style={styles.selectIconButton}>
           <img
             src={BeforeAfterKart1}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
+            style={styles.selectImage}
             alt='BeforeAfter'
           />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 16,
-            }}>
-            {'JONNY'}
-          </span>
+          <span style={styles.selectText}>{'JONNY'}</span>
         </IconButton>
-        <IconButton
-          style={{
-            width: '22%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
+        <IconButton style={styles.selectIconButton}>
           <img
             src={BeforeAfterKart2}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
+            style={styles.selectImage}
             alt='BeforeAfter'
           />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 16,
-            }}>
-            {'AHMET'}
-          </span>
+          <span style={styles.selectText}>{'AHMET'}</span>
         </IconButton>
-        <IconButton
-          style={{
-            width: '22%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
+        <IconButton style={styles.selectIconButton}>
           <img
             src={BeforeAfterKart3}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
+            style={styles.selectImage}
             alt='BeforeAfter'
           />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 16,
-            }}>
-            {'RICHARD'}
-          </span>
+          <span style={styles.selectText}>{'RICHARD'}</span>
         </IconButton>
-        <IconButton
-          style={{
-            width: '22%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
+        <IconButton style={styles.selectIconButton}>
           <img
             src={BeforeAfterKart4}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
+            style={styles.selectImage}
             alt='BeforeAfter'
           />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 16,
-            }}>
-            {'KANE'}
-          </span>
+          <span style={styles.selectText}>{'KANE'}</span>
         </IconButton>
-        <IconButton
-          style={{
-            width: '22%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
+        <IconButton style={styles.selectIconButton}>
           <img
             src={BeforeAfterKart1}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
+            style={styles.selectImage}
             alt='BeforeAfter'
           />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 16,
-            }}>
-            {'JONNY'}
-          </span>
+          <span style={styles.selectText}>{'JONNY'}</span>
         </IconButton>
-        <IconButton
-          style={{
-            width: '22%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
+        <IconButton style={styles.selectIconButton}>
           <img
             src={BeforeAfterKart2}
             style={{
@@ -620,66 +421,23 @@ export const SelectPeople = () => {
             }}
             alt='BeforeAfter'
           />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 16,
-            }}>
-            {'AHMET'}
-          </span>
+          <span style={styles.selectText}>{'AHMET'}</span>
         </IconButton>
-        <IconButton
-          style={{
-            width: '22%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
+        <IconButton style={styles.selectIconButton}>
           <img
             src={BeforeAfterKart3}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
+            style={styles.selectImage}
             alt='BeforeAfter'
           />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 16,
-            }}>
-            {'RICHARD'}
-          </span>
+          <span style={styles.selectText}>{'RICHARD'}</span>
         </IconButton>
-        <IconButton
-          style={{
-            width: '22%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
+        <IconButton style={styles.selectIconButton}>
           <img
             src={BeforeAfterKart4}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-              marginBottom: '5%',
-              marginTop: height * 0.02,
-            }}
+            style={styles.selectImage}
             alt='BeforeAfter'
           />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PlayfairDisplayBold',
-              fontSize: 16,
-            }}>
-            {'KANE'}
-          </span>
+          <span style={styles.selectText}>{'KANE'}</span>
         </IconButton>
       </div>
     </div>
@@ -698,52 +456,22 @@ const BeforeAfter = () => {
   };
 
   return (
-    <div
-      style={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-      }}>
+    <div style={styles.container}>
       <Header />
-      <div
-        style={{
-          marginTop: height * 0.30,
-        }}></div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '100%',
-          marginBottom: height * 0.05,
-        }}>
-        <div
-          style={{
-            display: 'flex',
-            width: '80%',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-evenly',
-          }}>
+      <div style={styles.dividerStyle}></div>
+      <div style={styles.typeSubContainer}>
+        <div style={styles.typeSubContainer2}>
           {typeListState.map((n, i) => {
             return (
               <IconButton
                 key={i}
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '24%',
-                }}
+                style={styles.typeIconButton}
                 onClick={() => changeSelected(n)}>
                 <img
                   src={n.url}
                   style={{
+                    ...styles.typeImg,
                     width: n.Selected == true ? '100%' : '70%',
-                    marginBottom: height * 0.01,
-                    objectFit: 'contain',
                     opacity: n.Selected == true ? 1 : 0.5,
                   }}
                   alt='Hoi'
@@ -758,6 +486,103 @@ const BeforeAfter = () => {
       <Footer />
     </div>
   );
+};
+
+const styles = {
+  container: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  dividerStyle: {
+    marginTop: height * 0.3,
+  },
+  typeSubContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: height * 0.05,
+  },
+  typeSubContainer2: {
+    display: 'flex',
+    width: '80%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+  },
+  typeIconButton: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '24%',
+  },
+  typeImg: {
+    marginBottom: height * 0.01,
+    objectFit: 'contain',
+  },
+  selectContainer: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: height * 0.05,
+  },
+  selectSubcontainer: {
+    width: '80%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+  },
+  selectIconButton: {
+    width: '22%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  selectImage: {
+    width: '100%',
+    objectFit: 'contain',
+    marginBottom: '5%',
+    marginTop: height * 0.02,
+  },
+  selectText: {
+    color: globalStyles.greenColor,
+    fontFamily: 'PlayfairDisplayBold',
+    fontSize: globalStyles.h16,
+  },
+  carouselContainer: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: height * 0.05,
+  },
+  swiperStyles: {
+    width: width,
+    height: height * 0.47,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  swiperTitle: {
+    color: globalStyles.blackColor,
+    fontFamily: 'PlayfairDisplayBold',
+    fontSize: globalStyles.h35,
+    width: 'auto',
+    marginLeft: width * 0.1,
+    marginRight: width * 0.1,
+  },
+  swiperImage: {
+    width: '80%',
+    objectFit: 'contain',
+    marginBottom: globalStyles.m5,
+    marginTop: height * 0.02,
+  },
 };
 
 export default BeforeAfter;

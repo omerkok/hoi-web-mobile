@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
+import { globalStyles } from '../../assets/Styles';
 import './WideButton.css';
 const WideButton = ({ text, onPress }) => {
   let width = document.documentElement.clientWidth;
@@ -11,12 +12,16 @@ const WideButton = ({ text, onPress }) => {
       style={{
         height: height * 0.06,
         width: width * 0.8,
-        backgroundColor: '#779f7d',
+        backgroundColor: globalStyles.greenColor,
         borderRadius: 15,
       }}
       onClick={onPress}>
       <span
-        style={{ fontFamily: 'PoppinsMedium', color: '#ffffff', fontSize: 24 }}>
+        style={{
+          fontFamily: 'PoppinsMedium',
+          color: globalStyles.whiteColor,
+          fontSize: globalStyles.h24,
+        }}>
         {text}
       </span>
     </Button>

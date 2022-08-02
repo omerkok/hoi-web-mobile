@@ -3,71 +3,34 @@ import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { globalStyles } from '../../assets/Styles';
 import BeardTransplant from '../../images/BeardTransplant.png';
 import Dsc1 from '../../images/Dsc1.png';
 import DscCopy1 from '../../images/DscCopy1.png';
 import DscCopy2 from '../../images/DscCopy2.png';
 import DscCopy3 from '../../images/DscCopy3.png';
+import '../../assets/Styles/PStyles.css';
 
 var width = document.documentElement.clientWidth;
 var height = document.documentElement.clientHeight;
 
 export const WhoCan = () => {
   return (
-    <div
-      style={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
-      <div
-        style={{
-          width: '40%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          zIndex: 2,
-        }}>
-        <span
-          style={{
-            fontFamily: 'PoppinsBold',
-            color: '#779f7d',
-            fontSize: 30,
-            textAlign: 'left',
-          }}>
+    <div style={styles.whoCanContainer}>
+      <div style={styles.whoCanSubcontainer}>
+        <span style={styles.whoCanTitle}>
           {'WHO CAN HAVE A HAIR TRANSPLANT'}
         </span>
-        <p
-          style={{
-            fontFamily: 'PoppinsRegular',
-            color: '#1f232a',
-            fontSize: 18,
-            textAlign: 'left',
-          }}>
+        <p style={styles.whocCanP}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
           suspendisse ultrices gravida.
         </p>
       </div>
-      <div
-        style={{
-          width: '40%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          zIndex: 1,
-        }}>
+      <div style={styles.whoCanSubcontainer2}>
         <img
           src={BeardTransplant}
-          style={{
-            width: '115%',
-            height: height * 0.5,
-            objectFit: 'contain',
-          }}
+          style={styles.whoCanImage}
           alt='BeforeAfter'
         />
       </div>
@@ -76,83 +39,24 @@ export const WhoCan = () => {
 };
 
 export const DividerConst = () => {
-  return (
-    <Divider
-      style={{
-        width: width,
-        height: height * 0.05,
-        backgroundColor: '#f5f5f5',
-        border: 0,
-      }}
-    />
-  );
+  return <Divider style={styles.dividerConst} />;
 };
 
 export const Operations = () => {
   return (
-    <div
-      style={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        paddingTop: height * 0.03,
-        paddingBottom: height * 0.05,
-      }}>
-      <div
-        style={{
-          width: '80%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'space-evenly',
-        }}>
+    <div style={styles.operationsContainer}>
+      <div style={styles.operationsSubcontainer}>
         {' '}
-        <span
-          style={{
-            fontFamily: 'PoppinsBold',
-            color: '#779f7d',
-            fontSize: 30,
-            textAlign: 'center',
-          }}>
-          {'BEFORE OPERATION'}
-        </span>
-        <p
-          style={{
-            fontFamily: 'PoppinsSemiBold',
-            color: '#1f232a',
-            fontSize: 18,
-            textAlign: 'left',
-            width: '100%',
-          }}>
+        <span style={styles.operationsTitle}>{'BEFORE OPERATION'}</span>
+        <p style={styles.operationsSubTitle}>
           Hair transplants are suitable for both men and women of all
           ethnicities. <br /> <br /> Two factors are need to be considered for a
           hair transplant:
         </p>
       </div>
-      <div
-        style={{
-          width: '80%',
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'flex-start',
-          justifyContent: 'space-between',
-        }}>
-        <div
-          style={{
-            width: '60%',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            alignItems: 'flex-start',
-          }}>
-          <p
-            style={{
-              fontFamily: 'PoppinsRegular',
-              color: '#1f232a',
-              fontSize: 14,
-              textAlign: 'left',
-            }}>
+      <div style={styles.operationsDiv1}>
+        <div style={styles.operationsDiv2}>
+          <p style={styles.operationsP2}>
             1. There is enough healthy hair on your head to transplant to the
             place where hair is needed.
             <br /> <br /> 2. The capacity to develop hair in areas of your scalp
@@ -165,132 +69,41 @@ export const Operations = () => {
             body and what's causing your hair loss..
           </p>
         </div>
-        <div
-          style={{
-            width: '35%',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-          }}>
-          <img
-            src={Dsc1}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-            }}
-            alt='BeforeAfter'
-          />
+        <div style={styles.operationsImageContainer}>
+          <img src={Dsc1} style={styles.operationsImage} alt='BeforeAfter' />
         </div>
       </div>
-      <div
-        style={{
-          width: '80%',
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'flex-start',
-          justifyContent: 'space-between',
-          marginTop: height * 0.03,
-        }}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '31%',
-          }}>
-          <img
-            src={DscCopy1}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-            }}
-            alt='Hoi'
-          />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PoppinsBold',
-              fontSize: 18,
-              marginBottom: height * 0.01,
-            }}>
-            {'ANALYSIS'}
-          </span>
-          <span
-            style={{
-              color: '#000000',
-              fontFamily: 'PoppinsRegular',
-              fontSize: 18,
-            }}>
+      <div style={styles.operationsSubcontainer2}>
+        <div style={styles.operationsSubcontainer3}>
+          <img src={DscCopy3} style={styles.operationsImage} alt='Hoi' />
+          <div style={styles.operationsTitleContainer2}>
+            <span className='line2' style={styles.operationsTitle2}>
+              {'ANALYSIS'}
+            </span>
+          </div>
+          <span style={styles.operationsSubTitle2}>
             {'1. There is enough healthy hair on your head...'}
           </span>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '31%',
-          }}>
-          <img
-            src={DscCopy2}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-            }}
-            alt='Hoi'
-          />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PoppinsBold',
-              fontSize: 18,
-              marginBottom: height * 0.01,
-            }}>
-            {'DONOR AREA'}
-          </span>
-          <span
-            style={{
-              color: '#000000',
-              fontFamily: 'PoppinsRegular',
-              fontSize: 18,
-            }}>
+        <div style={styles.operationsSubcontainer3}>
+          <img src={DscCopy2} style={styles.operationsImage} alt='Hoi' />
+          <div style={styles.operationsTitleContainer2}>
+            <span className='line2' style={styles.operationsTitle2}>
+              {'DONOR AREA'}
+            </span>
+          </div>
+          <span style={styles.operationsSubTitle2}>
             {'1. There is enough healthy hair on your head...'}
           </span>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '31%',
-          }}>
-          <img
-            src={DscCopy3}
-            style={{
-              width: '100%',
-              objectFit: 'contain',
-            }}
-            alt='Hoi'
-          />
-          <span
-            style={{
-              color: '#779f7d',
-              fontFamily: 'PoppinsBold',
-              fontSize: 18,
-              marginBottom: height * 0.01,
-            }}>
-            {'GRAFT SEPERATION'}
-          </span>
-          <span
-            style={{
-              color: '#000000',
-              fontFamily: 'PoppinsRegular',
-              fontSize: 18,
-            }}>
+        <div style={styles.operationsSubcontainer3}>
+          <img src={DscCopy3} style={styles.operationsImage} alt='Hoi' />
+          <div style={styles.operationsTitleContainer2}>
+            <span className='line2' style={styles.operationsTitle2}>
+              {'GRAFT  SEPERATION '}
+            </span>
+          </div>
+          <span style={styles.operationsSubTitle2}>
             {'1. There is enough healthy hair on your head...'}
           </span>
         </div>
@@ -301,17 +114,9 @@ export const Operations = () => {
 
 const HairTransplant = () => {
   return (
-    <div
-      style={{
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-      }}>
+    <div style={styles.container}>
       <Header />
-      <div
-        style={{
-          marginTop: height * 0.27,
-        }}></div>
+      <div style={styles.divider}></div>
       <WhoCan />
       <DividerConst />
       <Operations />
@@ -322,6 +127,158 @@ const HairTransplant = () => {
       <Footer />
     </div>
   );
+};
+
+const styles = {
+  container: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  divider: {
+    marginTop: height * 0.27,
+  },
+  whoCanContainer: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  whoCanSubcontainer: {
+    width: '40%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 2,
+  },
+  whoCanSubcontainer2: {
+    width: '40%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1,
+  },
+  whoCanTitle: {
+    fontFamily: 'PoppinsBold',
+    color: globalStyles.greenColor,
+    fontSize: globalStyles.h30,
+    textAlign: 'left',
+  },
+  whocCanP: {
+    fontFamily: 'PoppinsRegular',
+    color: globalStyles.blackColor,
+    fontSize: globalStyles.h18,
+    textAlign: 'left',
+  },
+  whoCanImage: {
+    width: '115%',
+    height: height * 0.5,
+    objectFit: 'contain',
+  },
+  dividerConst: {
+    width: width,
+    height: height * 0.05,
+    backgroundColor: globalStyles.whiteGreyColor,
+    border: 0,
+  },
+  operationsContainer: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingTop: height * 0.03,
+    paddingBottom: height * 0.05,
+  },
+  operationsSubcontainer: {
+    width: '80%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+  },
+  operationsTitle: {
+    width: '100%',
+    fontFamily: 'PoppinsBold',
+    color: globalStyles.greenColor,
+    fontSize: globalStyles.h30,
+    textAlign: 'center',
+  },
+  operationsSubTitle: {
+    width: '100%',
+    fontFamily: 'PoppinsSemiBold',
+    color: globalStyles.blackColor,
+    fontSize: globalStyles.h18,
+    textAlign: 'left',
+  },
+  operationsDiv1: {
+    width: '80%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+  },
+  operationsDiv2: {
+    width: '60%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+  },
+  operationsP2: {
+    width: '100%',
+    fontFamily: 'PoppinsRegular',
+    color: globalStyles.blackColor,
+    fontSize: globalStyles.h14,
+    textAlign: 'left',
+  },
+  operationsImageContainer: {
+    width: '35%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
+  operationsSubcontainer2: {
+    width: '80%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    marginTop: height * 0.03,
+  },
+  operationsSubcontainer3: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '31%',
+  },
+  operationsImage: {
+    width: '100%',
+    objectFit: 'contain',
+  },
+  operationsTitleContainer2: {
+    width: '100%',
+    height: height * 0.08,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  operationsTitle2: {
+    width: '100%',
+    color: globalStyles.greenColor,
+    fontFamily: 'PoppinsBold',
+    fontSize: globalStyles.h18,
+  },
+  operationsSubTitle2: {
+    width: '100%',
+    color: globalStyles.blackDarkColor,
+    fontFamily: 'PoppinsRegular',
+    fontSize: globalStyles.h18,
+  },
 };
 
 export default HairTransplant;

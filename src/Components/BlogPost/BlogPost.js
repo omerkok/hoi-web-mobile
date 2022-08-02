@@ -1,7 +1,9 @@
 import React from 'react';
+import { globalStyles } from '../../assets/Styles';
 import Blog1 from '../../images/Blog1.png';
 import Blog2 from '../../images/Blog2.png';
 import Blog3 from '../../images/Blog3.png';
+import '../../assets/Styles/PStyles.css';
 
 let width = document.documentElement.clientWidth;
 let height = document.documentElement.clientHeight;
@@ -16,12 +18,12 @@ const BlogPost = () => {
       <div style={styles.subContainerPost}>
         <div style={styles.imageContainer}>
           <img src={Blog2} style={styles.image} alt='Hoi'></img>
-          <span style={styles.title}>
+          <span className='line2' style={styles.title}>
             {'GRAFT'}
             <br />
             {' SIZE'}
           </span>
-          <span style={styles.text}>
+          <span className='line5' style={styles.text}>
             {
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.'
             }
@@ -38,18 +40,17 @@ const BlogPost = () => {
       <div style={styles.subContainerPost}>
         <div style={styles.imageContainer}>
           <img src={Blog3} style={styles.image} alt='Hoi'></img>
-          <span style={styles.title}>
+          <span className='line2' style={styles.title}>
             {'GRAFT'}
             <br />
             {' SIZE'}
           </span>
-          <span style={styles.text}>
+          <span className='line5' style={styles.text}>
             {
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
             }
           </span>
         </div>
-
         <span style={styles.date}>
           {'02'}
           <br />
@@ -61,12 +62,12 @@ const BlogPost = () => {
       <div style={styles.subContainerPost}>
         <div style={styles.imageContainer}>
           <img src={Blog1} style={styles.image} alt='Hoi'></img>
-          <span style={styles.title}>
+          <span className='line2' style={styles.title}>
             {'GRAFT'}
             <br />
             {' SIZE'}
           </span>
-          <span style={styles.text}>
+          <span className='line5' style={styles.text}>
             {
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.'
             }
@@ -94,7 +95,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-end',
-    marginTop:'5%'
+    marginTop: globalStyles.m5,
   },
   subContainerBlock: {
     width: '100%',
@@ -105,8 +106,16 @@ const styles = {
     position: 'absolute',
     zIndex: 1,
   },
-  block1: { width: '30%', height: height * 0.8, backgroundColor: '#7d575e' },
-  block2: { width: '15%', height: height * 0.8, backgroundColor: '#7d575e' },
+  block1: {
+    width: '30%',
+    height: height * 0.8,
+    backgroundColor: globalStyles.brownColor,
+  },
+  block2: {
+    width: '17%',
+    height: height * 0.8,
+    backgroundColor: globalStyles.brownColor,
+  },
   subContainerPost: {
     width: '88%',
     height: height * 0.3,
@@ -115,7 +124,7 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingRight: '2%',
+    paddingRight: '1%',
   },
   image: {
     height: height * 0.26,
@@ -127,28 +136,31 @@ const styles = {
   },
   imageContainer: { height: height * 0.26, width: '80%', position: 'relative' },
   title: {
-    color: '#1f232a',
+    width: width * 0.38,
+    color: globalStyles.blackColor,
+    textAlign: 'left',
     position: 'absolute',
     bottom: 0,
     left: 5,
     zIndex: 4,
     fontFamily: 'PlayfairDisplayBold',
-    fontSize: 30,
+    fontSize: globalStyles.h30,
   },
   text: {
-    color: '#1f232a',
+    color: globalStyles.blackColor,
     position: 'absolute',
-    top: height * 0.03,
+    top: height * 0.006,
     right: 5,
     zIndex: 4,
     fontFamily: 'PoppinsRegular',
-    fontSize: 14,
+    fontSize: globalStyles.h14,
     width: '90%',
   },
   date: {
-    color: '#ffffff',
+    width: '17%',
+    color: globalStyles.whiteColor,
     zIndex: 4,
-    fontFamily: 'PlayfairDisplaybOLD',
-    fontSize: 30,
+    fontFamily: 'PlayfairDisplayBold',
+    fontSize: globalStyles.h30,
   },
 };

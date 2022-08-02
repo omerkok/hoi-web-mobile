@@ -7,7 +7,6 @@ import './fonts/Poppins-Light.ttf';
 import './fonts/Poppins-SemiBold.ttf';
 import './fonts/PlayfairDisplay-Bold.ttf';
 import './fonts/PlayfairDisplay-Medium.ttf';
-import './fonts/PlayfairDisplay-MediumItalic.ttf';
 import './fonts/PlayfairDisplay-Regular.ttf';
 
 import './index.css';

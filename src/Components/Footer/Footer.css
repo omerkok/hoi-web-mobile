@@ -56,14 +56,11 @@
   justify-content: space-between;
   width: 100%;
   height: auto;
-  padding-top: 7%;
+  padding-top: 25%;
   padding-bottom: 7%;
   margin-top: 5%;
-  background-image: linear-gradient(
-    to bottom,
-    #779f7d,
-    #85a98a 30%,
-    #fff 67%,
-    #fff
-  );
+  background-image: url("../../images/AboutUsBg.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 150%;
 }
