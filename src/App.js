@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import HomePage from './pages/HomePage';
@@ -12,10 +13,26 @@ import BeforeAfterPage from './pages/BeforeAfterPage';
 function App() {
   let width = document.documentElement.clientWidth;
   let height = document.documentElement.clientHeight;
+
   return (
-    <div className='App' style={{ width: width, height: height }}>
-      <ContactUsPage />
-    </div>
+    <BrowserRouter>
+      <div className='App' style={{ width: width, height: height }}>
+        <Routes>
+          <Route path='/' exact element={<HomePage />} />
+          <Route
+            path='/hairtransplant'
+            exact
+            element={<HairTransplantPage />}
+          />
+          <Route path='/dhiandfue' exact element={<DhiAndFuePage />} />
+          <Route path='/blog' exact element={<BlogPage />} />
+          <Route path='/aboutus' exact element={<AboutUsPage />} />
+          <Route path='/ourclinic' exact element={<OurClinicPage />} />
+          <Route path='/beforeafter' exact element={<BeforeAfterPage />} />
+          <Route path='/contactus' exact element={<ContactUsPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -240,7 +240,7 @@ const styles = {
     height: height * 0.3,
   },
   logoStyle: {
-    height: width * 0.18,
-    width: width * 0.18,
+    height: width * 0.22,
+    width: width * 0.22,
   },
 };
